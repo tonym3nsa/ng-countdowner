@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-ng-countdowner',
@@ -11,12 +11,12 @@ export class NgCountdownerComponent implements OnInit {
   @Output() timerExpired = new EventEmitter(true); // emit timer expiry
   @Output() timerStarted = new EventEmitter(true);
   @Input() countDownTimerVisible: boolean;
-
   countDownDate: any;
   countTimer: any;
   setInterval: any;
-  currentTimeStamp: any;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
 
