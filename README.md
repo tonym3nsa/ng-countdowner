@@ -11,3 +11,16 @@ NgCountdowner is a configurable Angular 6 countdown timer.
         (timerExpired)="handleEvent($event)"
 </ng-coundowner>
 ```
+
+## Configuration fields
+| Property  | Description | Default value | Required |
+| :----------- | :------------- | :--------------- | :---------- |
+| countDownTimerVisible | Enable countdown timer |  | N |
+| start     | start date of countdown timer |  | N |
+| end    | end date of countdown timer |  | Y |
+
+## Events
+| Events  | Description| Data
+| :----------- | :------------- | 
+| timerExpired  | emits when countdown ends | 
+
