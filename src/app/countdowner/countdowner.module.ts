@@ -7,6 +7,9 @@ import { NgCountdownerComponent } from './ng-countdowner/ng-countdowner.componen
   ],
   declarations: [
     NgCountdownerComponent
+  ],
+  exports: [
+    NgCountdownerComponent
   ]
 })
 export class CountdownerModule { }

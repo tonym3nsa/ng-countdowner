@@ -11,6 +11,7 @@ export class NgCountdownerComponent implements OnInit {
   @Output() timerExpired = new EventEmitter(true); // emit timer expiry
   @Output() timerStarted = new EventEmitter(true);
   @Input() countDownTimerVisible: boolean;
+  @Input() expiryMessage: string;
   countDownDate: any;
   countTimer: any;
   setInterval: any;
@@ -43,7 +44,6 @@ export class NgCountdownerComponent implements OnInit {
   runTimer() {
     const now = new Date().getTime(); // Getting current timestamp
     const interval = this.countDownDate - now; // Difference between current timestamp and end timestamp
-    console.log('interval', interval, this.countDownDate);
     const seconds = Math.floor((interval % (1000 * 60)) / 1000); // calculating seconds
     const minutes = Math.floor((interval % (1000 * 60 * 60)) / (1000 * 60)); // calculating minutes
     const hours = Math.floor((interval % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // calculating hours
@@ -53,7 +53,12 @@ export class NgCountdownerComponent implements OnInit {
     if (interval < 0) {
       clearInterval(this.setInterval);
       this.timerExpired.emit({'started': this.start, 'ended': this.end});
-      this.countTimer = 'Timer has expired';
+      if (this.expiryMessage === ''){
+        this.countTimer = 'Timer has expired';
+      } else {
+        this.countTimer = this.expiryMessage;
+      }
+
     }
   }
 
