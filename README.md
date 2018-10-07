@@ -13,11 +13,11 @@ NgCountdowner is a configurable Angular 6 countdown timer.
 ```
 
 ## Configuration fields
-| Property  | Description | Default value | Required |
-| :----------- | :------------- | :--------------- | :---------- |
-| countDownTimerVisible | Enable countdown timer | true | N |
-| start     | start date of countdown timer |  | N |
-| end    | end date of countdown timer |  | Y |
+| Property  | Description | Default value |Format| Required |
+| :----------- | :------------- | :--------------- | :---------- |:---------- |
+| countDownTimerVisible | Enable countdown timer | true || N |
+| start     | start date of countdown timer | | mm/d/yyy hh:mm:ss| N |
+| end    | end date of countdown timer |  | mm/d/yyy hh:mm:ss| Y |
 
 ## Events
 | Events  | Description| Data
