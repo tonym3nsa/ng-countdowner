@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:800');
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 120px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.network a {
+  font-size: 30px !important;
+  color: #ffffff;
+  margin-left: 10px;
+  margin-right: 10px;
+}

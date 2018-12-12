@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter, HostBinding} from '@angular/core';
 
 @Component({
   selector: 'app-ng-countdowner',
@@ -6,6 +6,7 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
   styleUrls: ['./ng-countdowner.component.css']
 })
 export class NgCountdownerComponent implements OnInit {
+
   @Input() end: any; // end date of countdown
   @Input() start: any; // start date of countdown
   @Output() timerExpired = new EventEmitter(true); // emit timer expiry
@@ -25,6 +26,7 @@ export class NgCountdownerComponent implements OnInit {
   }
 
   initTimer() {
+
     const start = new Date(this.start).getTime();
     const currentdate = new Date();
     const currentTimeStamp = currentdate.getTime();
@@ -50,10 +52,15 @@ export class NgCountdownerComponent implements OnInit {
     const days = Math.floor(interval / (1000 * 60 * 60 * 24)); // calculating days
     this.countTimer = this.prependZero(days) + ':' + this.prependZero(hours) + ':' + this.prependZero(minutes) + ':' + this.prependZero(seconds);
 // Emitting timer-end event
+
+    let body = document.querySelector('body');
+    let bgColor =  '#' + this.prependZero(hours) + this.prependZero(minutes) + this.prependZero(seconds);
+    body.style.backgroundColor = bgColor;
+    console.log('bg: ', bgColor);
     if (interval < 0) {
       clearInterval(this.setInterval);
       this.timerExpired.emit({'started': this.start, 'ended': this.end});
-      if (this.expiryMessage === ''){
+      if (this.expiryMessage === '') {
         this.countTimer = 'Timer has expired';
       } else {
         this.countTimer = this.expiryMessage;

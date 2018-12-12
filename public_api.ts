@@ -1,1 +1,1 @@
-export * from './src/app/countdowner/countdowner.module';
+export * from './src/countdowner/countdowner.module';
