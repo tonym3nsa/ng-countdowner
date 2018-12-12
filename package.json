@@ -3,17 +3,23 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "packagr": "ng-packagr -p ng-package.json"
+    "packagr": "ng-packagr -p ng-package.json",
+    "postinstall": "ng build --aot -prod"
   },
   "private": false,
   "dependencies": {
-
-
+    "express": "^4.16.4",
+    "path": "^0.12.7",
+    "typescript": "~2.7.2"
+  },
+  "engines": {
+    "node": "8.11.3",
+    "npm": "6.4.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.8",
@@ -24,6 +30,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.2.1",
+    "enhanced-resolve": "^3.3.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~1.7.1",
