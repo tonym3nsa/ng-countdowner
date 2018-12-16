@@ -3,9 +3,19 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:800');
 body {
     color: #ffffff;
-    font-size: 200px;
+    font-size: 150px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     transition: background-color 2s cubic-bezier(1, 1, 1, 1);
     transition-delay: 0s;
+}
+
+#link_up {
+    text-align: center;
+}
+
+#link_up a {
+    color: #ffffff;
+    font-size: 50px;
+    margin: 10px;
 }
