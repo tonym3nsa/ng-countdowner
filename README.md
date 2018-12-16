@@ -1,6 +1,7 @@
 # NgCountdowner
 
-NgCountdowner is a configurable Angular 6 countdown timer. Demo [here](https://ng-countdowner.firebaseapp.com/)
+NgCountdowner is a configurable Angular 6 countdown timer. Demo [here](https://ng-countdowner.firebaseapp.com/){:target="_blank"}.
+
 
 
 ```
@@ -14,16 +15,16 @@ NgCountdowner is a configurable Angular 6 countdown timer. Demo [here](https://n
 ```
 
 ## Configuration fields
-| Property  | Description | Default value |Format| Required | Data type |
-| :----------- | :------------- | :--------------- | :---------- |:---------- |:---------- |
-| countDownTimerVisible | Enable countdown timer | true || N | boolean|
-| expiryMessage | Custom message to display once countdown expires | || N | string|
-| start     | start date of countdown timer | | mm/d/yyyy hh:mm:ss| N | string|
-| end    | end date of countdown timer |  | mm/d/yyyy hh:mm:ss| Y | string|
+| Property              | Description                                      | Default value | Format             | Required | Data type |
+| :-------------------- | :----------------------------------------------- | :------------ | :----------------- | :------- | :-------- |
+| countDownTimerVisible | Enable countdown timer                           | true          | N                  | boolean  |
+| expiryMessage         | Custom message to display once countdown expires |               | N                  | string   |
+| start                 | start date of countdown timer                    |               | mm/d/yyyy hh:mm:ss | N        | string    |
+| end                   | end date of countdown timer                      |               | mm/d/yyyy hh:mm:ss | Y        | string    |
 
 ## Events
-| Events  | Description| Data
-| :----------- | :------------- | :------------ |
-| timerExpired  | emits when countdown ends| object |
+| Events       | Description               | Data   |
+| :----------- | :------------------------ | :----- |
+| timerExpired | emits when countdown ends | object |
 
 
