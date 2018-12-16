@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:800');
+body {
+    color: #ffffff;
+    font-size: 200px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 2s cubic-bezier(1, 1, 1, 1);
+    transition-delay: 0s;
+}
