@@ -1,8 +1,11 @@
 <app-ng-countdowner
+  [expiryMessage]="'This is a custom expiry message'"
   [countDownTimerVisible]="true"
   (timerExpired)="handleEvent($event)"
-  [start]="'10/5/2017 20:21:40'"
-  [end]="'1/1/2019 00:00'"
+  [start]="'10/5/2018 20:21:40'"
+  [end]="'10/7/2019 18:22:15'"
+
 ></app-ng-countdowner>
+
 
 
