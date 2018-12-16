@@ -1,6 +1,6 @@
 # NgCountdowner
 
-NgCountdowner is a configurable Angular 6 countdown timer. Demo [here](https://ng-countdowner.firebaseapp.com/){:target="_blank"}.
+NgCountdowner is a configurable Angular 6 countdown timer. Demo [here](https://ng-countdowner.firebaseapp.com/).
 
 
 
